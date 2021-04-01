@@ -16,21 +16,21 @@ pipeline {
 		}
 		stage('Build'){
 			steps {
-				dir(/node-app) {
+				dir('/node-app') {
 					sh 'npm install'
 				}
 			}
 		}
 		stage('Test'){
 			steps {
-				dir(/node-app) {
+				dir('/node-app') {
 					sh './node_modules/.bin/mocha ./test/test.js'
 				}
 			}
 		}
 		stage('Run'){
 			steps {
-				dir(/node-app) {
+				dir('/node-app') {
 					sh 'node index.js'
 				}
 			}	
