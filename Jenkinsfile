@@ -9,6 +9,13 @@ pipeline {
 		CI = 'true'
 	}
 	stages {
+		stage('clone'){
+			steps {
+				git clone https://github.com/Harsh-Lumiq/node-app.git
+			}
+		}
+	}
+	stages {
 	
 		stage('Build'){
 			steps {
