@@ -12,6 +12,7 @@ pipeline {
 	
 		stage('Build'){
 			steps {
+
 				dir(/node-app) {
 					docker build -t jen-ub-image .
 				}
