@@ -1,5 +1,8 @@
-FROM node
-COPY /node-app .
-WORKDIR /node-app
+FROM node:13
+COPY . /app
+WORKDIR /app
+RUN ls
 RUN npm install
-ENTRYPOINT ["node index.js"]
+COPY . /app
+CMD node index.js
+EXPOSE 9000
